@@ -13,6 +13,9 @@ package com.ai.jvm;
  * -Xmx20M 内存上限
  * -XX:SurvivoRatio=8
  * -Xmn20M
+ * -XX:PretenureSizeThreshold 大对象直接进入老年代
+ * -XX:MaxTenuringThreshold 长期存活的对象将进入到老年代
+ * -XX:+HandlePromotionFailure 空间分配担保
  * @author Administrator
  */
 public class PrintGCDetail {
