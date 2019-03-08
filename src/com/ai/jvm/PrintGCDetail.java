@@ -1,7 +1,8 @@
 package com.ai.jvm;
 
 /**
- * 打印GC日志，class位置
+ * 	鎵撳嵃GC鏃ュ織鍙傛暟
+ * -verbose:gc -verbose:class -XX:+PrintGCDetails
  * @author Administrator
  *
  */
