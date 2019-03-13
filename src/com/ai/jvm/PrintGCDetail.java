@@ -16,6 +16,7 @@ package com.ai.jvm;
  * -XX:PretenureSizeThreshold 大对象直接进入老年代
  * -XX:MaxTenuringThreshold 长期存活的对象将进入到老年代
  * -XX:+HandlePromotionFailure 空间分配担保
+ * 
  * @author Administrator
  */
 public class PrintGCDetail {

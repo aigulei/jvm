@@ -11,6 +11,10 @@ package com.ai.jvm.command;
  * jinfo -flag UseSerialGC pid:查看pid的进程号是否使用Serial的GC收集器
  * -XX:[+/-]option 设置值
  * -XX:option=value 设置值
+ * jmap：
+ * jmap -dump:format=b,file=d:\a.bin pid：在D盘下生成pid的dump文件
+ * jhat
+ * jhat dump文件，分析dump文件
  * @author Administrator
  *
  */
