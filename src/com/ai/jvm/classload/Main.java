@@ -18,10 +18,25 @@ package com.ai.jvm.classload;
  * 被一同指定
  * 3：int 0,Boolean false ,Float 0.0 ,char '0',抽象数据类型 null 
  * @author Administrator
+ * 解析：
+ * 1：解析阶段是虚拟机将常量池中的符号引用替换为直接引用的过程
+ * 2：类或接口的解析
+ * 3：字段解析
+ * 4：类方法解析
+ * 5：接口方法解析
+ * 初始化：
+ * 1：初始化是类加载的最后一步
+ * 2：初始化是执行clinit方法的过程
  *
  */
 public class Main {
-	public static void main(String[] args) {
-		Parent.hello();
+	public static void main(String[] args) throws Exception {
+		MyClassLoader classLoader = new MyClassLoader();
+		Object c = classLoader.loadClass("com.ai.jvm.classload.MyClassLoader").newInstance();
+		System.out.println(c.getClass());
+		System.out.println(c instanceof MyClassLoader);
 	}
+	/*
+	 * public static void main(String[] args) { Parent.hello(); }
+	 */
 }
