@@ -2,6 +2,7 @@ package com.ai.jvm.lock;
 
 public class Sequence {
 	private static int value;
+	private static final Object OBJECT = new Object();
 	
 	/**
 	 * 	放在普通方法上，内置锁就是当前类的实例
@@ -25,7 +26,7 @@ public class Sequence {
 	}
 	
 	public int getAbc() {
-		synchronized (this) {
+		synchronized (OBJECT) {
 			value++;
 		}
 		return value;
