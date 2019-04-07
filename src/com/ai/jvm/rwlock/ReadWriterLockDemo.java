@@ -13,6 +13,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
  * 锁升级
  * 锁升级是指读锁升级为写锁
  * 在读锁没有释放的时候，获取到写锁，再释放读锁
+ * 注意：ReadWriterLock不支持锁升级
  * @author bjp-yxkj-gul
  *
  */
