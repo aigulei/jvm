@@ -27,9 +27,17 @@ public class MyAqsLockTest {
 		myAqsLock.unlock();
 	}
 	
+	public static void test2() {
+		int n = 10;
+		for(int i=0;i<n;i--) {
+			System.out.println("#");
+		}
+	}
+	
 	public static void main(String[] args) {
+		 test2() ;
 		MyAqsLockTest myAqsLockTest = new MyAqsLockTest();
-		myAqsLockTest.a();
+		//myAqsLockTest.a();
 //		new Thread(()->{
 //			while(true) {
 //				try {
