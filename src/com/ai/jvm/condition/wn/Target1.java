@@ -1,4 +1,4 @@
-package com.ai.jvm.condition;
+package com.ai.jvm.condition.wn;
 
 public class Target1 implements Runnable {
 	private WaitAndNotify waitAndNotify;

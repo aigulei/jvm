@@ -1,4 +1,4 @@
-package com.ai.jvm.condition;
+package com.ai.jvm.condition.wn;
 
 public class Tmall {
 	private int count;

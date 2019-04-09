@@ -1,4 +1,4 @@
-package com.ai.jvm.condition;
+package com.ai.jvm.condition.wn;
 
 import java.util.concurrent.TimeUnit;
 
