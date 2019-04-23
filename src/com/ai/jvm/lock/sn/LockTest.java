@@ -10,15 +10,14 @@ public class LockTest {
         Stream.of("T1","T2","T3","T4").forEach(name ->{
             new Thread(()->{
                 try {
-                    booleanLock.lock(40L);
+                    booleanLock.lock(20000);
                     Optional.of(Thread.currentThread().getName()+" have the lock monitor")
                             .ifPresent(System.out::println);
                     work();
                 }catch (InterruptedException ex){
                     ex.printStackTrace();
                 } catch (Lock.TimeOutException e) {
-                    Optional.of(Thread.currentThread().getName()+" TimeOut")
-                    .ifPresent(System.out::println);
+                    e.printStackTrace();
                 } finally {
                     booleanLock.unlock();
                 }
@@ -29,6 +28,6 @@ public class LockTest {
     private static void work() throws InterruptedException {
         Optional.of(Thread.currentThread().getName()+" is working")
                 .ifPresent(System.out::println);
-        Thread.sleep(40_000);
+        Thread.sleep(4_000);
     }
 }
