@@ -15,6 +15,12 @@ package com.ai.jvm.classload;
  * 2:通过数组定义来引用类
  * 3：引用类的常量
  * @author Administrator
+ * new,直接使用
+ * 访问某个类或者接口的静态变量的时候，或者对该静态变量进行赋值操作
+ * 调用静态方法
+ * 反射某个类
+ * 初始化一个子类
+ * 启动类
  *
  */
 public class Parent {
